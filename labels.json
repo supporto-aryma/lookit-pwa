@@ -1,0 +1,141 @@
+{
+  "labels": {
+    "reviewsTab": "Recensioni",
+    "allergensFilterBtn": "Clicca per allergie o intolleranze",
+    "languageBtn": "Cambia Lingua",
+    "callBtn": "Chiama",
+    "indicationsBtn": "Indicazione",
+    "bookingBtn": "Prenota",
+    "webSiteBtn": "Sito Web",
+    "openingHours": "Orari di apertura",
+    "allergensOptionBtn": "Allergeni",
+    "addBtn": "Aggiungi",
+    "ordersTitle": "Ordine",
+    "noOrders": "Non ci sono ordini",
+    "total": "Totale",
+    "orderSummary": "Riepilogo ordine",
+    "order": "Ordina",
+    "wouldLikeToOrder": "Vorrei ordinare",
+    "showWaiter": "Mostra al camariere",
+    "sendToRestaurant": "Invia al Ristorante",
+    "orderFromHome": "Ordina da Casa",
+    "filterForAllergens": "Filtro per allergeni",
+    "applyFilters": "Applica Filtri",
+    "listHasBeenFiltered": "L'elenco è stato filtrato",
+    "close": "Chiudi",
+    "allergensList": [
+      "Cereali/glutine",
+      "Crostacei",
+      "Uova",
+      "Pesce",
+      "Arachidi",
+      "Soia",
+      "Latte",
+      "Frutta a guscio",
+      "Sedano",
+      "Senape",
+      "Sesamo",
+      "Solfiti",
+      "Lupini",
+      "Molluschi"
+    ],
+    "gt_translate_keys": [
+      {
+        "key": "reviewsTab",
+        "format": "text"
+      },
+      {
+        "key": "allergensFilterBtn",
+        "format": "text"
+      },
+      {
+        "key": "languageBtn",
+        "format": "text"
+      },
+      {
+        "key": "callBtn",
+        "format": "text"
+      },
+      {
+        "key": "indicationsBtn",
+        "format": "text"
+      },
+      {
+        "key": "bookingBtn",
+        "format": "text"
+      },
+      {
+        "key": "webSiteBtn",
+        "format": "text"
+      },
+      {
+        "key": "openingHours",
+        "format": "text"
+      },
+      {
+        "key": "allergensOptionBtn",
+        "format": "text"
+      },
+      {
+        "key": "addBtn",
+        "format": "text"
+      },
+      {
+        "key": "ordersTitle",
+        "format": "text"
+      },
+      {
+        "key": "noOrders",
+        "format": "text"
+      },
+      {
+        "key": "total",
+        "format": "text"
+      },
+      {
+        "key": "orderSummary",
+        "format": "text"
+      },
+      {
+        "key": "order",
+        "format": "text"
+      },
+      {
+        "key": "wouldLikeToOrder",
+        "format": "text"
+      },
+      {
+        "key": "showWaiter",
+        "format": "text"
+      },
+      {
+        "key": "sendToRestaurant",
+        "format": "text"
+      },
+      {
+        "key": "orderFromHome",
+        "format": "text"
+      },
+      {
+        "key": "filterForAllergens",
+        "format": "text"
+      },
+      {
+        "key": "applyFilters",
+        "format": "text"
+      },
+      {
+        "key": "listHasBeenFiltered",
+        "format": "text"
+      },
+      {
+        "key": "close",
+        "format": "text"
+      },
+      {
+        "key": "allergensList",
+        "format": "list"
+      }
+    ]
+  }
+}
