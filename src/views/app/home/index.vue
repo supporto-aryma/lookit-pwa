@@ -25,6 +25,7 @@
             <v-container>
               <keep-alive>
                 <AllergenFilter
+                  v-if="Number(getCustomerDetails.filtro_allergeni)"
                   :btnText="getLabels.allergensFilterBtn"
                   :title="getLabels.filterForAllergens"
                   :applyBtn="getLabels.applyFilters"
@@ -127,13 +128,13 @@ export default {
     },
     backgroundImg() {
       return (
-        "https://demo.condivision.cloud/fl_config/demo.condivision.cloud/public/cdn/?r=" +
+        "https://lookit.condivision.cloud/fl_config/demo.condivision.cloud/public/cdn/?r=" +
         this.getCustomerDetails.bg_image
       );
     },
     logoImg() {
       return (
-        "https://demo.condivision.cloud/fl_config/demo.condivision.cloud/public/cdn/?r=" +
+        "https://lookit.condivision.cloud/fl_config/demo.condivision.cloud/public/cdn/?r=" +
         this.getCustomerDetails.logo_image
       );
     },

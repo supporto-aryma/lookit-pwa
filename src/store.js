@@ -48,8 +48,8 @@ export default new Vuex.Store({
       orderSummary: "Riepilogo ordine",
       order: "Ordina",
       wouldLikeToOrder: "Vorrei ordinare",
-      showWaiter: "Mostra al cameriere",
-      sendToRestaurant: "Invia al Ristorante",
+      showWaiter: "Mostra",
+      sendToRestaurant: `Invia WhatsApp\u2122`,
       orderFromHome: "Ordina da Casa",
       filterForAllergens: "Filtro per allergeni",
       applyFilters: "Applica Filtri",
@@ -324,15 +324,17 @@ export default new Vuex.Store({
         {
           name: "google",
           text: "Google Reviews",
-          href:
-            "https://search.google.com/local/writereview?placeid=" +
-            state.customerDetails.google
+          href: state.customerDetails.google
+            ? "https://search.google.com/local/writereview?placeid=" +
+              state.customerDetails.google
+            : ""
         },
         {
           name: "trip-advisor",
           text: "TripAdvisor",
-          href:
-            "https://www.tripadvisor.it/" + state.customerDetails.trip_advisor
+          href: state.customerDetails.trip_advisor
+            ? "https://www.tripadvisor.it/" + state.customerDetails.trip_advisor
+            : ""
         },
         {
           name: "facebook",

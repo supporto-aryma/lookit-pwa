@@ -3,7 +3,7 @@
     <v-card>
       <v-img
         :src="
-          'https://demo.condivision.cloud/fl_config/demo.condivision.cloud/public/ricettario/?r=' +
+          'https://lookit.condivision.cloud/fl_config/lookit.condivision.cloud/public/ricettario/?r=' +
             item.id +
             '.jpg'
         "
