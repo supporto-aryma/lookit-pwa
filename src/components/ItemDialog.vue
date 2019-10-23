@@ -12,7 +12,7 @@
       />
 
       <v-card-text>
-        <h2 class="mb-2">{{ item.nome }}</h2>
+        <h2 class="mb-2" v-html="item.nome" />
 
         <p v-html="item.descrizione" />
       </v-card-text>
