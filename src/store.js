@@ -8,7 +8,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     loading: true,
-    offers: [],
+    offers: null,
     itemDialog: false,
     itemSelected: {
       id: "",

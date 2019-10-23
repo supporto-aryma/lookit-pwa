@@ -49,7 +49,7 @@
               </a> -->
 
               <v-list class="pt-0">
-                <template v-if="getOffers.items.length > 0">
+                <template v-if="getOffers">
                   <v-list-item @click="openOffers">
                     <v-list-item-content>
                       <v-list-item-title
