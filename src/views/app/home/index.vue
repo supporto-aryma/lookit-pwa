@@ -23,6 +23,11 @@
         <v-tab-item>
           <v-card flat>
             <v-container>
+              <div
+                v-if="getCustomerDetails.testo_superiore_home"
+                v-html="decodeHTML(getCustomerDetails.testo_superiore_home)"
+                class="mb-2"
+              />
               <keep-alive>
                 <AllergenFilter
                   v-if="Number(getCustomerDetails.filtro_allergeni)"
@@ -31,22 +36,6 @@
                   :applyBtn="getLabels.applyFilters"
                 />
               </keep-alive>
-
-              <!-- <a
-                @click="openOffers"
-                :style="{ marginLeft: '1em', color: mainColor }"
-              >
-                <v-alert
-                  class="mt-3 mb-0"
-                  outlined
-                  dense
-                  border="left"
-                  type="success"
-                  :color="mainColor"
-                >
-                {{ offersLabel }}
-                </v-alert>
-              </a> -->
 
               <v-list class="pt-0">
                 <template v-if="getOffers">
@@ -70,6 +59,11 @@
                 </template>
               </v-list>
 
+              <div
+                v-if="getCustomerDetails.testo_inferiore_home"
+                v-html="decodeHTML(getCustomerDetails.testo_inferiore_home)"
+                class="mb-2"
+              />
               <Translate :btnText="getLabels.languageBtn" />
             </v-container>
           </v-card>
@@ -154,6 +148,11 @@ export default {
     openOffers() {
       this.$router.push({ name: "offers" });
       // this.$store.commit("SET_CURRENT_VIEW", "Offers");
+    },
+    decodeHTML(html) {
+      var txt = document.createElement("textarea");
+      txt.innerHTML = html;
+      return txt.value;
     }
   },
   data: () => ({
