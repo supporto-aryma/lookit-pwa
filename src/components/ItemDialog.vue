@@ -3,7 +3,7 @@
     <v-card>
       <v-img
         :src="
-          'https://demo.condivision.cloud/fl_config/demo.condivision.cloud/public/ricettario/?r=' +
+          'https://lookit.condivision.cloud/fl_config/lookit.condivision.cloud/public/ricettario/?r=' +
             item.id +
             '.jpg'
         "
@@ -12,7 +12,7 @@
       />
 
       <v-card-text>
-        <h2 class="mb-2">{{ item.nome }}</h2>
+        <h2 class="mb-2" v-html="item.nome" />
 
         <p v-html="item.descrizione" />
       </v-card-text>

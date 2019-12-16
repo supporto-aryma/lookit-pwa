@@ -3,27 +3,22 @@
     <v-container v-if="section">
       <v-row class="flex-column">
         <v-col>
-          <h3 class="subtitle-1 text-uppercase">
-            {{ section.subcat_name }}
-          </h3>
+          <h3 class="subtitle-1 text-uppercase" v-html="section.subcat_name" />
           <v-divider></v-divider>
+          <h4
+            v-if="section.subcat_testo_introduzione"
+            class="mt-1 caption"
+            v-html="decodeHTML(section.subcat_testo_introduzione)"
+          />
         </v-col>
       </v-row>
 
       <v-row v-for="item in section.items" :key="item.id">
         <v-col cols="12">
           <v-card>
-            <!-- <v-card-title
-              v-if="!item.src"
-              class="grey lighten-2"
-              v-html="item.nome"
-            /> -->
-
             <v-img
               :src="
-                'https://demo.condivision.cloud/fl_config/demo.condivision.cloud/public/ricettario/?r=' +
-                  item.id +
-                  '.jpg'
+                `https://lookit.condivision.cloud/fl_config/lookit.condivision.cloud/public/ricettario/?r=${item.id}.jpg`
               "
               class="white--text fill-height align-end"
               height="150px"
@@ -108,7 +103,6 @@ export default {
   computed: {
     categoryId() {
       return this.$route.params.id;
-      // return this.$store.getters.getCategoryId;
     },
     section() {
       return this.$store.getters.getSectionById(this.categoryId)[0];
@@ -121,6 +115,11 @@ export default {
     }
   },
   methods: {
+    decodeHTML(html) {
+      var txt = document.createElement("textarea");
+      txt.innerHTML = html;
+      return txt.value;
+    },
     isHigher(value) {
       if (value > 0) {
         return true;

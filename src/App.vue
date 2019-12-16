@@ -94,7 +94,8 @@ export default {
     }
   },
   created() {
-    let query = "MQ==";
+    let query = location.hostname === "localhost" ? "Mw==" : "MQ==";
+
     if (this.$route.query.q) {
       query = this.$route.query.q;
     }
@@ -103,8 +104,6 @@ export default {
     }
     this.$store.dispatch("getInitialData", query);
     console.log("route", this.$route);
-    // console.log("router", this.$router);
-    // this.$router.push("/");
   }
 };
 </script>

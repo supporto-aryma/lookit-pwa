@@ -50,10 +50,14 @@
         </v-col>
       </v-row>
     </v-card>
-    <v-card v-if="getCustomerDetails.info" flat tile class="my-3">
+    <v-card v-if="getCustomerDetails.info_html" flat tile class="my-3">
       <v-container class="pa-3">
         <h3 class="mb-2">Info</h3>
-        <p class="mb-2 body-2" v-text="getCustomerDetails.info" />
+        <!-- {{ getCustomerDetails.info_html }} -->
+        <div
+          class="mb-2 body-2"
+          v-html="decodeHTML(getCustomerDetails.info_html)"
+        />
         <!-- <h3 class="mb-2">E-mail</h3> -->
         <!-- <a class="body-2" :href="'mailto:' + getCustomerDetails.email">{{
           getCustomerDetails.email
